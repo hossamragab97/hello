@@ -1,0 +1,21 @@
+{
+  "HOME":"Home",
+  "LOGIN":"Login",
+  "LOG_OUT":"Log Out",
+  "TABLE":"Table",
+  "Email":"email",
+  "PASSWORD":"password",
+  "sign":"Sign up",
+  "Switch to Login":"switch to login",
+  "Switch to signup":"switch to sign up",
+  "FirstName":"firstName",
+  "last name":"lastname",
+  "phone":"phone",
+  "enter_firstname":"enter firstname",
+  "enter_lastname":"enter lastname",
+  "enter_Email":"enter your email",
+  "enter_Phone":"enter vaild phone",
+  "enter_password":"enter valid password",
+  "Lan":"lan",
+  "submit":"submit"
+}

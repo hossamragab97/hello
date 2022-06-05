@@ -1,0 +1,14 @@
+.main-div{
+    padding: 16px;
+    margin-top: 100px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+.bg-img {
+    background-image: url("./assets/log.jpg");
+    height: 91vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

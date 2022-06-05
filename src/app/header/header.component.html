@@ -1,0 +1,43 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a  routerLink="/home"><img src="https://media-exp1.licdn.com/dms/image/C4D0BAQE0gSYx1GcKXA/company-logo_200_200/0/1610379055127?e=2147483647&v=beta&t=TDQoYZ2xEUbOmktgAQ9nz2YS16vr3lzwI9J_C0Qjncc" width="60px" height="40px"></a>
+  <button class="navbar-toggler" style="margin-left: auto;" (click)="col=!col" type="button" data-toggle="collapse"
+    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" [ngClass]="{'collapse':col ,'navbar-collapse':true}" id="navbarSupportedContent">
+      <ul class="navbar-nav nav-tabs ss">
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf="isAuth">
+          <a class="nav-link" routerLink="home"><p>{{"HOME"|translate}} <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf="isAuth">
+          <a class="nav-link" routerLink="table">{{"TABLE"|translate}}</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf="!isAuth">
+          <a class="nav-link" routerLink="auth">{{"LOGIN"|translate}}</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav navbar-right ss">
+        <li class="nav-item" *ngIf="isAuth">
+          <a style="color: teal;" class="nav-link">{{email}}</a>
+        </li>
+        <li class="nav-item" *ngIf="isAuth">
+          <a class="nav-link" routerLink="auth" (click)="onLogout()">{{"LOG_OUT"|translate}}</a>
+        </li>
+        <li class="nav-item dropdown " appDropdown>
+
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            {{"Lan"|translate}}
+          </a>
+          <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+            <button class="dropdown-item drop" (click)="ChangeCurrentLang('en')">en</button>
+            <button class="dropdown-item drop" (click)="ChangeCurrentLang('ar')">ar</button>
+          </div>
+        </li>
+      </ul>
+  </div>
+
+</nav>

@@ -1,0 +1,137 @@
+<!-- <div class="container">
+    <div class="col-xs-6">
+        <h3>user active</h3>
+        <div style="display: flex;" *ngFor="let i of userActive ; let ii = index">
+            <p>{{i}} | <button (click)="inActive(ii)"> set to Active</button></p>
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <h3>user inActive</h3>
+        <div style="display: flex;" *ngFor="let i of userInActive ; let ii = index">
+            <p>{{i}} | <button (click)="Active(ii)"> set to Active</button></p>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" (click)="goTOLink()">
+        go to link
+    </button>
+</div> -->
+<div class="bg-img">
+  <div class="container">
+    <form [formGroup]="signFormGroup" (ngSubmit)="onsubmit()" class=" form-div">
+      <div class="form-group">
+        <label for="firstname">{{"FirstName" | translate}}</label>
+        <input id="firstname" type="text" class="form-control" formControlName="firstname">
+        <span class="error" *ngIf="signFormGroup.get('firstname')?.invalid && signFormGroup.get('firstname')?.touched ">{{"enter_firstname" | translate}}</span>
+      </div>
+  <div class="form-group">
+    <label for="lastname">{{"last name" | translate}}</label>
+    <input id="lastname" type="text" class="form-control" formControlName="lastname">
+    <span class="error" *ngIf="signFormGroup.get('lastname')?.invalid && signFormGroup.get('lastname')?.touched ">{{"enter_lastname" | translate}}</span>
+
+  </div>
+      <div class="form-group">
+        <label for="email">{{"Email" | translate}}</label>
+        <input id="email" type="text" class="form-control" formControlName="email">
+        <span class="error" *ngIf="signFormGroup.get('email')?.invalid && signFormGroup.get('email')?.touched ">{{"enter_Email" | translate}}</span>
+      </div>
+      <div class="form-group">
+        <label for="phone">{{"phone" | translate}}</label>
+        <input id="phone" type="t" class="form-control" formControlName="phone" autocomplete="off" placeholder="01x xxxx xxxx">
+        <span class="error" *ngIf="!signFormGroup.get('phone')?.valid && signFormGroup.get('phone')?.touched">{{"enter_Phone" | translate}}</span>
+      </div>
+      <div class="form-group">
+        <label for="password">{{"PASSWORD" | translate}}</label>
+        <input id="password" type="password" class="form-control" formControlName="password">
+        <span class="error" *ngIf="!signFormGroup.get('password')?.valid && signFormGroup.get('password')?.touched ">{{"enter_password" | translate}}</span>
+      </div>
+      <button [disabled]="!signFormGroup.valid" type="submit" class="btn btn-success btn-lg btn-block">{{"submit"|translate}}</button>
+  </form>
+  </div>
+</div>
+
+<!--
+  <div class="container">
+    <form [formGroup]="signFormGroup"] (ngSubmit)="onsubmit()">
+        <div id="user-data">
+            <div formGroupName="userData">
+                <div class="form-group">
+                    <label for="username">user name</label>
+                    <input id="username" type="text" class="form-control" formControlName="username">
+                <span *ngIf="!signFormGroup.get('userData.username')?.valid">enter user name</span>
+                </div>
+                <div class="form-group">
+                    <label for="password">email</label>
+                    <input id="password" type="text" class="form-control" formControlName="password">
+                    <span *ngIf="!signFormGroup.get('userData.password')?.valid">enter valid email</span>
+                </div>
+            </div>
+            <button [disabled]="!signFormGroup.valid" type="submit" class="btn btn-success">submit</button>
+        </div>
+    </form>
+</div> -->
+
+<!--
+<div class="container col-xs-12 col-md-6 col-md-offset-3">
+    <form (ngSubmit)="onsubmit()" #formm="ngForm">
+        <div id="user-data">
+            <div>
+                <div class="form-group">
+                    <label for="username">user name</label>
+                    <input
+                    type="text"
+                    class="form-control"
+                    ngModel
+                    name="username"
+                    required
+                    [(ngModel)]="titlePost">
+
+                </div>
+                <div class="form-group">
+                    <label for="email">email</label>
+                    <input
+                    type="text"
+                    class="form-control"
+                    ngModel
+                    name="email"
+                    required
+                    email
+                    [(ngModel)]="content">
+
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success" [disabled]="formm.invalid"
+                (click)="createPost({title:titlePost,content:content})">add</button>
+             |
+            <button type="submit" class="btn btn-danger" (click)="clear()">clear</button>
+        </div>
+    </form>
+</div>
+
+<div class="container col-xs-12 col-md-6 col-md-offset-3">
+    <div class="col-xs-12">
+
+        <ul class="list-group">
+            <li *ngFor="let i of loadPosts">
+                <h3>{{i.title}}</h3>
+                <p *ngIf="loadPosts.length>0">{{i.content}}</p>
+                <hr>
+            </li>
+        </ul>
+        <p *ngIf="loadPosts.length<1 && isFeatch && !error">loading...</p>
+        <p *ngIf="loadPosts.length<1 && !isFeatch">no posts</p>
+        <div class="alert alert-danger" *ngIf="error">
+            <p>{{error}}</p>
+        </div>
+    </div>
+
+
+</div>
+
+<style>
+    input.ng-invalid {
+        border: 1px solid red;
+    }
+</style> -->
+
+

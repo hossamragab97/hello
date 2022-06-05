@@ -1,0 +1,18 @@
+/* .main-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.chart{
+background-color: wheat;
+height: 100%;
+}
+ */
+
+ ::ng-deep .ngx-charts .bar {
+    stroke: red;
+    stroke-dasharray: 0,X,Y,0;
+}
+

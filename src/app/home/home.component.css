@@ -1,0 +1,18 @@
+.form-div {
+  padding: 16px;
+  margin-top: 20px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+}
+
+.error{
+  color: red;
+   font-size:15px
+}
+
+.bg-img {
+  background-image: url("./assets/log.jpg");
+  height: 88.8vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
